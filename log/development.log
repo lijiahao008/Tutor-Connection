@@ -1411,3 +1411,1697 @@ Processing by ProfilesController#index as HTML
 Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2016-07-14 12:13:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_header.html.erb (7.1ms)
+Completed 200 OK in 313ms (Views: 294.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 12:13:47 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 103ms (Views: 89.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 12:13:49 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (9.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-07-14 12:13:57 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"logyF0w5H/QoLzlPpu66YyKyf8Bu0H2LxF0SXvGs1G/9W3eK3bKWgvsUvzDS8AS8T7f1d2yrcD5pXLsUbTjvWQ==", "user"=>{"email"=>"lijiahao008@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'lijiahao008@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2016-07-14 16:13:57', `sign_in_count` = 2, `updated_at` = '2016-07-14 16:13:57' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:13:57 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 12:14:03 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"whHQrRiLZtP3wOnLna3Qs7KFDPXZl+jHab3yd11diJFBmETxOxwunEF4Dp14LKRcaDUj/lRiGg0aSQXFt3jZcg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:14:03 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:15:23 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:45: unknown regexp option - a
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:45: syntax error, unexpected '<'
+            <li><a href="#">Another action</a></li>
+                                               ^
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:46: unknown regexp option - a
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:46: syntax error, unexpected '<'
+            <li><a href="#">Something else here</a></li>
+                                                    ^
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:47: unknown regexp option - l
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:48: syntax error, unexpected '<'
+            <li><%= link_to "Log Out", des...
+             ^
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:48: syntax error, unexpected ',', expecting ')'
+...sion_path, :method => :delete , class: "active" );@output_bu...
+...                               ^):
+  
+app/views/layouts/_header.html.erb:45: unknown regexp option - a
+app/views/layouts/_header.html.erb:45: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:46: unknown regexp option - a
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:47: unknown regexp option - l
+app/views/layouts/_header.html.erb:48: syntax error, unexpected '<'
+app/views/layouts/_header.html.erb:48: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70134984187200'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.9ms)
+Started GET "/" for ::1 at 2016-07-14 12:15:42 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 12:15:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-07-14 12:15:51 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oz4CQgSorlcgHkoULLdLOB5VUvqOJEp/Em4K7fqe/E8tNcRFAFRGG9KyXZnIMXX4FlTmnjv/lJFa8S/03nHVVg==", "user"=>{"email"=>"lijiahao008@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'lijiahao008@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2016-07-14 16:15:51', `last_sign_in_at` = '2016-07-14 16:13:57', `sign_in_count` = 3, `updated_at` = '2016-07-14 16:15:51' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:15:51 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:15:54 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:16:09 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:16:12 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:18:39 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 12:18:47 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cTHfov3MeJc8kAaK0f4JdQdAzW6qKONOYjD2BvRkxGceEIds4M6HlYsq2AuNUPtGT/Dhd4L862vI5i/LC6q8vA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:18:47 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:20:50 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:21:12 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:21:39 -0400
+Processing by ProfilesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 12:21:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-07-14 12:21:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n2kOY4MBqUEhEyOvIYcPZt9VJgn7aUbZa4DzmWETSgR23JaDnUXcKczXzSFWd+nKTpe3JIWe+DG6akN/kfQk6w==", "user"=>{"email"=>"lijiahao008@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'lijiahao008@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2016-07-14 16:21:47', `last_sign_in_at` = '2016-07-14 16:15:51', `sign_in_count` = 4, `updated_at` = '2016-07-14 16:21:47' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/new
+Completed 302 Found in 145ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:21:47 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `profiles` SET `user_id` = NULL, `updated_at` = '2016-07-14 16:21:47' WHERE `profiles`.`id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (5.1ms)
+  Rendered profiles/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 83ms (Views: 51.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:21:52 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profiles/2/edit" for ::1 at 2016-07-14 12:21:56 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profiles/edit.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.9ms)
+  Rendered profiles/edit.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/profiles" for ::1 at 2016-07-14 12:22:01 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:22:03 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 1 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.6ms)
+  Rendered profiles/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 57.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/profiles" for ::1 at 2016-07-14 12:23:05 -0400
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"97F4W+Djr4nha8RvXUN36GJMOgMYwtkPLoLlkRZ++i8BmEs3ZRd0G1sPP+kz6tv6Ry+2snEy/eOzyaJEjMnRaA==", "profile"=>{"name"=>"jay", "address"=>"123", "rate"=>"34", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f93277d75a0 @tempfile=#<Tempfile:/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/RackMultipart20160714-42435-1s4bcyj.jpg>, @original_filename="BJ small.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[image]\"; filename=\"BJ small.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Profile"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/996f2f2ff4dca1c4d699af29e0be801120160714-42435-63af5f.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/31d8dce9394637c03740d9287ccc1cbe20160714-42435-1pcqebx.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/31d8dce9394637c03740d9287ccc1cbe20160714-42435-1pcqebx.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/31d8dce9394637c03740d9287ccc1cbe20160714-42435-1pcqebx.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/6ceb3bc54ade7afdf8f6bdc04173373120160714-42435-1figlk'
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/996f2f2ff4dca1c4d699af29e0be801120160714-42435-wz7vra.jpg'
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `profiles` (`name`, `address`, `rate`, `created_at`, `updated_at`, `user_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`) VALUES ('jay', '123', 34, '2016-07-14 16:23:06', '2016-07-14 16:23:06', 1, 'BJ_small.jpg', 'image/jpeg', 1359705, '2016-07-14 16:23:05')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/3
+Completed 302 Found in 1285ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/profiles/3" for ::1 at 2016-07-14 12:23:06 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 3 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:23:09 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:27:30 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profiles/3" for ::1 at 2016-07-14 12:28:01 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProfile Load (1.9ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 3 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.2ms)
+Completed 200 OK in 100ms (Views: 89.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:28:10 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:28:35 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `profiles` SET `user_id` = NULL, `updated_at` = '2016-07-14 16:28:35' WHERE `profiles`.`id` = 3[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.9ms)
+  Rendered profiles/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 67ms (Views: 52.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:28:38 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 1 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (4.5ms)
+  Rendered profiles/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 60.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:28:40 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 60.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddProfileIdToUsers (20160714163154)
+  [1m[35m (104.1ms)[0m  [1m[35mALTER TABLE `users` ADD `profile_id` int[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160714163154')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `profiles`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'profiles'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'app_development'
+  AND fk.table_name = 'profiles'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'app_development'
+  AND fk.table_name = 'users'
+[0m
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 12:33:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5JgMp9XttTBT+G4zzEvJ90CBcktfrMGzhJn4PCO/TrBHWecJ1cKZjs9FVj6uMt+jRx3eZT39Q/ThmQyt9hBegg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:33:59 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 12:34:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 12:34:02 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-14 12:34:17 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzarKI6yHYT+yHoODoB233twcBU9HT6k+cx6aUfR9p+z1R+d11jw42Gtt8X2inOtQKvG5ltoRqZ+PVP/MYEYFw==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '123@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('123@gmail.com', '$2a$11$ghrwtmlYMSR3ouzYGb5hO.qTOsHvU6xFWKVEyg9faLehh9NDacrVi', '2016-07-14 16:34:17', '2016-07-14 16:34:17')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2016-07-14 16:34:17', `last_sign_in_at` = '2016-07-14 16:34:17', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 156ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:34:17 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:37:21 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:61: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/layouts/_header.html.erb:61: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/_header.html.erb:63: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70134943988700'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+Started GET "/" for ::1 at 2016-07-14 12:37:44 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (71.4ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `null' for #<#<Class:0x007f93288d2bc0>:0x007f9327199260>):
+    42:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+    43:           <ul class="dropdown-menu">
+    44:             <li><%= link_to "My Account", edit_user_registration_path %></li>
+    45:             <% if current_user.profile_id == null %>
+    46:             <li><%= link_to 'My Profile', new_profile_path %></li>
+    47:             <% end %>
+    48: 
+  
+app/views/layouts/_header.html.erb:45:in `_app_views_layouts__header_html_erb___2166050090812982358_70134962338320'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70134996405680'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.9ms)
+Started GET "/" for ::1 at 2016-07-14 12:38:05 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:38:52 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:38:56 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:38:58 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:39:00 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:39:15 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:39:17 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:39:20 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.2ms)
+  Rendered profiles/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 75ms (Views: 65.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/profiles" for ::1 at 2016-07-14 12:39:34 -0400
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlQf6ruNqZPPfuA6+/SM7gC7TbAhwLAJKJCmgPBmJPKWJH89G9CjXelJYvTUXKQKxCOJD8wYSv6NMPgZqC/TPA==", "profile"=>{"name"=>"23", "address"=>"45", "rate"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f93277b88a8 @tempfile=#<Tempfile:/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/RackMultipart20160714-42435-1hul3p7.jpg>, @original_filename="cat 2 small.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[image]\"; filename=\"cat 2 small.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Profile"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/09f7eecae102610cd5714d0289343b9820160714-42435-vnmv2.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/526c66850c280198baadfbe01092b01720160714-42435-acc0g6.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/526c66850c280198baadfbe01092b01720160714-42435-acc0g6.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/526c66850c280198baadfbe01092b01720160714-42435-acc0g6.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/d9f85c9040e6637ae3b367c95f6543f220160714-42435-e36q09'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/09f7eecae102610cd5714d0289343b9820160714-42435-ibpbbp.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `profiles` (`name`, `address`, `rate`, `created_at`, `updated_at`, `user_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`) VALUES ('23', '45', 67, '2016-07-14 16:39:36', '2016-07-14 16:39:36', 2, 'cat_2_small.jpg', 'image/jpeg', 2008391, '2016-07-14 16:39:34')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/4
+Completed 302 Found in 1533ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/profiles/4" for ::1 at 2016-07-14 12:39:36 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 4 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:39:42 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 90ms (Views: 87.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:39:57 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 84ms (Views: 81.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:39:59 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `profiles` SET `user_id` = NULL, `updated_at` = '2016-07-14 16:39:59' WHERE `profiles`.`id` = 4[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (3.8ms)
+  Rendered profiles/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 68ms (Views: 53.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:40:21 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:40:25 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.9ms)
+  Rendered profiles/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 62ms (Views: 54.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 12:40:27 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 63.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 12:41:07 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.8ms)
+  Rendered profiles/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 73ms (Views: 64.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/profiles" for ::1 at 2016-07-14 12:41:21 -0400
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o6bsN6yGZH0elsN+2r1R2EOn+FJk+7mTv4r5EmPIyqKz1ozgDNtuszihQbD1FXk8hz887YkjQ2QaKqeLO4E9bA==", "profile"=>{"name"=>"23", "address"=>"67", "rate"=>"87", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f93288c3170 @tempfile=#<Tempfile:/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/RackMultipart20160714-42435-fh9l09.jpg>, @original_filename="cat small.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[image]\"; filename=\"cat small.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Profile"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/502708d0717352f60ba9ea0fa5a22ff020160714-42435-1jhtl0q.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/e686cc8c1aac0c92877339d4f279ed7f20160714-42435-hj09z9.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/e686cc8c1aac0c92877339d4f279ed7f20160714-42435-hj09z9.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/e686cc8c1aac0c92877339d4f279ed7f20160714-42435-hj09z9.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/f424ceb83593776c6700034c46e81f2320160714-42435-1oilo7m'
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/502708d0717352f60ba9ea0fa5a22ff020160714-42435-1awf73e.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `profiles` (`name`, `address`, `rate`, `created_at`, `updated_at`, `user_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`) VALUES ('23', '67', 87, '2016-07-14 16:41:22', '2016-07-14 16:41:22', 2, 'cat_small.jpg', 'image/jpeg', 1350830, '2016-07-14 16:41:21')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/5
+Completed 302 Found in 1270ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/profiles/5" for ::1 at 2016-07-14 12:41:22 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 5 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profiles/5" for ::1 at 2016-07-14 12:56:09 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 5 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 12:56:14 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:00:05 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/Jiahao/Desktop/Tutor-Connection/app/views/layouts/_header.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_header.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70134954967660'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.9ms)
+Started GET "/" for ::1 at 2016-07-14 13:00:15 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:00:36 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:00:54 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:06:19 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:07:23 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 13:07:46 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2SueQYhWneOOBTi7gltOsU87a0jwbTPdSVkwK9Bg1M3v3opU6ZcMZPBNEIyPoITx3GUJ1179jOgjVVrPsGJ1Ag=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:07:46 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:07:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-07-14 13:07:51 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BtEca71DAkeJmRNsbv48j9mWSU7MtIh1up7WdKdbXXJgKElxx8JnjujjAWowhBYG4ILr+gngY33DWvFrvAmHWQ==", "user"=>{"email"=>"lijiahao008@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'lijiahao008@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2016-07-14 17:07:51', `last_sign_in_at` = '2016-07-14 16:21:47', `sign_in_count` = 5, `updated_at` = '2016-07-14 17:07:51' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:07:51 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 13:07:57 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7q7EOdLhic6qqX/vgc7PvZCPuxDL8k7/qBLhDeGEELaQLnk0V1+gtyDVP9TH3MeQxJfKj7QAeSeBYkBX16Ypyw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:07:57 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:07:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-07-14 13:08:04 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DGfr6SXir/6iEqjuQayoZBLjkbT8sNIxGoqRraawsb9enSiDViBEdXnWtKFgMPHMfrCRKqXMmmLM1EA/J4BYZg==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '123@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2016-07-14 17:08:05', `sign_in_count` = 2, `updated_at` = '2016-07-14 17:08:05' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:08:05 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:09:31 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.8ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"profiles"} missing required keys: [:id]):
+    45:             <% if  current_user.profile_id == nil %>
+    46:               <li><%= link_to 'My Profile', new_profile_path %></li>
+    47:             <% else %>
+    48:               <li><%= link_to 'My Profile', edit_profile_path %></li>
+    49:             <% end %>
+    50: 
+    51:             <li><a href="#">Something else here</a></li>
+  
+app/views/layouts/_header.html.erb:48:in `_app_views_layouts__header_html_erb___2166050090812982358_70134986087940'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70134999737960'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.7ms)
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:10:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:11:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:11:03 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.3ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x007f93277a0370>):
+    39:         <li><a href="#">Link</a></li>
+    40:         <% if user_signed_in? %>
+    41:         <li class="dropdown">
+    42:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
+    43:           <ul class="dropdown-menu">
+    44:             <li><%= link_to "My Account", edit_user_registration_path %></li>
+    45:             <% if  current_user.profile_id == nil %>
+  
+app/views/layouts/_header.html.erb:42:in `_app_views_layouts__header_html_erb___2166050090812982358_70134999604520'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70135010704760'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.1ms)
+Started GET "/" for ::1 at 2016-07-14 13:12:35 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (8.4ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"profiles"} missing required keys: [:id]):
+    45:             <% if  current_user.profile_id == nil %>
+    46:               <li><%= link_to 'My Profile', new_profile_path %></li>
+    47:             <% else %>
+    48:               <li><%= link_to 'My Profile', edit_profile_path %></li>
+    49:             <% end %>
+    50: 
+    51:             <li><a href="#">Something else here</a></li>
+  
+app/views/layouts/_header.html.erb:48:in `_app_views_layouts__header_html_erb___2166050090812982358_70134956904540'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70134964869000'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.6ms)
+Started GET "/" for ::1 at 2016-07-14 13:12:54 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:18:32 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 2 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 13:18:41 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eRTp2O/GcNVNNLlESQTkdVal5D98OSdsRIROo2QZmCilThpaKhevW74xwDffJrrD/D5nB1UpYeda/XMwZZEO2g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:18:41 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:18:43 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles/2/edit" for ::1 at 2016-07-14 13:18:53 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:18:53 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles/2" for ::1 at 2016-07-14 13:18:56 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles/2" for ::1 at 2016-07-14 13:18:59 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles/2/edit" for ::1 at 2016-07-14 13:19:01 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:19:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/profiles/2" for ::1 at 2016-07-14 13:19:46 -0400
+Processing by ProfilesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7FSn988PB6JDCrNg6YxA3K8XlsF8Z3vAYoO9xRn4aYDtBCPnzZ0IPU5Y9c6gkyDMG6YNki1sok3e//ra2uKYyQ==", "id"=>"2"}
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:19:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:21:11 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:21:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 13:21:51 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 13:21:55 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 13:21:58 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 67ms (Views: 62.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 13:47:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 13:47:33 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-14 13:47:42 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L0H0YN3payplbIa3ldP1MbvsomOPknFTbyKhSHH744cSqTsDKyDYQ0rWdNkh/4GPNTg0Ygvf3nZ9I15Lhqwp6A==", "user"=>{"email"=>"234@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '234@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('234@gmail.com', '$2a$11$DVMxsKAF75QcZ8kzadkkU.n/gh53DekMeES0j1g7GupwjKqK5Pyly', '2016-07-14 17:47:42', '2016-07-14 17:47:42')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2016-07-14 17:47:42', `last_sign_in_at` = '2016-07-14 17:47:42', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1' WHERE `users`.`id` = 3[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/2/edit
+Completed 302 Found in 149ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/profiles/2/edit" for ::1 at 2016-07-14 13:47:42 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profiles/edit.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.9ms)
+  Rendered profiles/edit.html.erb within layouts/application (4.4ms)
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 3 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.7ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    39:         <li><a href="#">Link</a></li>
+    40:         <% if user_signed_in? %>
+    41:         <li class="dropdown">
+    42:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.profile.name %> <span class="caret"></span></a>
+    43:           <ul class="dropdown-menu">
+    44:             <li><%= link_to "My Account", edit_user_registration_path %></li>
+    45:             <% if  current_user.profile_id == nil %>
+  
+app/views/layouts/_header.html.erb:42:in `_app_views_layouts__header_html_erb___2166050090812982358_70134985985560'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__303302540066096768_70135008337080'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.1ms)
+Started GET "/profiles/2/edit" for ::1 at 2016-07-14 13:48:40 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profiles/edit.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.0ms)
+  Rendered profiles/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profiles" for ::1 at 2016-07-14 13:48:51 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 13:48:56 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 3 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.9ms)
+  Rendered profiles/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 66ms (Views: 56.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 13:49:00 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles/5/edit" for ::1 at 2016-07-14 13:49:05 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profiles/edit.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.6ms)
+  Rendered profiles/edit.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 14:48:17 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 3 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (5.5ms)
+  Rendered profiles/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 70ms (Views: 60.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/profiles" for ::1 at 2016-07-14 14:48:39 -0400
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EdrgP/XPbrzJpf5g1+QiebyNDWQ3LJa7Cs+AqSIdi6SWgIRbE5d0yz06VgVadTWMQuUoQnDv2S7XZsmu9mAThg==", "profile"=>{"name"=>"kate", "address"=>"345", "rate"=>"34", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f93276addf0 @tempfile=#<Tempfile:/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/RackMultipart20160714-42435-1j7n0p6.jpg>, @original_filename="cat 2 small.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[image]\"; filename=\"cat 2 small.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Profile"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/09f7eecae102610cd5714d0289343b9820160714-42435-qch4ah.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/526c66850c280198baadfbe01092b01720160714-42435-12zsjaa.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/526c66850c280198baadfbe01092b01720160714-42435-12zsjaa.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/526c66850c280198baadfbe01092b01720160714-42435-12zsjaa.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/73f78b39172493a2abf5b82423bb235c20160714-42435-olwrvp'
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/mb/gb3kw0zs2h3953dsgsgfpf700000gn/T/09f7eecae102610cd5714d0289343b9820160714-42435-1eqc2td.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `profiles` (`name`, `address`, `rate`, `created_at`, `updated_at`, `user_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`) VALUES ('kate', '345', 34, '2016-07-14 18:48:41', '2016-07-14 18:48:41', 3, 'cat_2_small.jpg', 'image/jpeg', 2008391, '2016-07-14 18:48:39')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/6
+Completed 302 Found in 1542ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/profiles/6" for ::1 at 2016-07-14 14:48:41 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 6 LIMIT 1[0m
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:19:28 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (11.2ms)
+Completed 200 OK in 86ms (Views: 78.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:17 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:18 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:21 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 75ms (Views: 69.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:22 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:25 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 15:52:27 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:34 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 74ms (Views: 70.2ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 15:52:37 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ljWLOGSuPjYjD9hLNM/HHXJSpxBIW0wc84MRKY/ZExWXZQ8oZjwxqS5dnuV90KcNxuM8QxlQlZFP/1Y2TMPiXA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:52:37 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:53:12 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 15:53:16 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-14 15:53:28 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pe2ngPlLnpSiyCGN0V9CgJ1M2qrzsZzuMgTQUagIgDQYoDkdGiQF+puT3ROivC9cgf0eOHdwcojf5jrNgYEJ1A==", "user"=>{"email"=>"kwasix@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kwasix@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('kwasix@gmail.com', '$2a$11$twpXmLmQdH91EZ7MKjM/Ye/xJjlkB6ZeI/3UFPiSZQstBXkohsRJO', '2016-07-14 19:53:28', '2016-07-14 19:53:28')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2016-07-14 19:53:28', `last_sign_in_at` = '2016-07-14 19:53:28', `current_sign_in_ip` = '::1', `last_sign_in_ip` = '::1' WHERE `users`.`id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:53:28 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 15:53:31 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 4 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (2.1ms)
+  Rendered profiles/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 73ms (Views: 61.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-07-14 15:53:34 -0400
+Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`user_id` = 4 LIMIT 1[0m
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (3.5ms)
+  Rendered profiles/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 59ms (Views: 50.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-14 15:53:37 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-07-14 15:53:40 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GNH6sqrkIanNLY/7wj0bfrIMK37xMJWYZv63XH8/GMIYqJ9gcT9rR6UWHm8nauGG1K6y65WygTWlKFJ84B01iA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-14 15:53:40 -0400
+Processing by ProfilesController#index as HTML
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT `profiles`.* FROM `profiles`[0m
+  Rendered profiles/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-07-14 15:53:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-07-14 15:53:42 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-14 15:53:49 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mElehCtZXUQGI6BAD1stC3Nfinhu/Y1Q2JKwU9U00cizRd7fC6fxGLiIubm8x37L40In9tkStTCrhjAV4pyKFA==", "user"=>{"email"=>"kwasix@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kwasix@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 191ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2016-07-14 15:53:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (6.2ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (95.0ms)
+Started GET "/users" for ::1 at 2016-07-14 15:55:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (8.9ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Jiahao/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.0ms)
+Started GET "/users/sign_up" for ::1 at 2016-07-14 15:56:01 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
