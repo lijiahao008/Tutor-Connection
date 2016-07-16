@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 <%= image_tag @profile.image.url(:medium) %>
+<div class= "star-rating" data-score= <%= @avg_review %> ></div>
+<em><%= "#{@reviews.length} reviews" %></em>
 <p>
   <strong>Name:</strong>
   <%= @profile.name %>
@@ -11,11 +13,41 @@
 </p>
 
 <p>
-  <strong>Rate:</strong>
+  <strong>Hourly rate:</strong>
   <%= @profile.rate %>
 </p>
 <% if user_signed_in? && (current_user.id == @profile.user_id) %>
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Back', profiles_path %> |
+
+<%= link_to 'Write a review', new_profile_review_path(@profile) %>
+
+<p>
+  <strong>Reviews:</strong>
+  <% if @reviews.blank? %>
+  	<h3> No reviews yet </h3>
+  <% else %>
+  	<% @reviews.each do |review| %>
+  		<div class= "reviews">
+  			<div class= "star-rating" data-score= <%= review.rating %> ></div>
+  			<p><%= review.comment %></p>
+  			<% if review.user_id == current_user.id %>
+  				<%= link_to 'Delete Review', profile_review_path(@profile, review), method: :delete, data: { confirm: 'Are you sure?' }%>
+  			<% end %>
+  		</div>
+  	<% end %>
+  <% end %>
+
+</p>
+
+<script>
+	$('.star-rating').raty({
+		path: '/assets',
+		readOnly: true,
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+</script>
