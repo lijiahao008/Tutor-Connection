@@ -3,6 +3,15 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :profile_owner, only: [:edit, :update, :destroy]
 
+
+  def search
+    if params[:search].present?
+      @profiles = Profile.search(params[:search])
+    else
+      @profiles = Profile.all
+    end
+  end
+  
   def profile_owner
     unless @profile.user_id == current_user.id
       flash[:notice] = 'Access denied as you are not owner of this Profile'

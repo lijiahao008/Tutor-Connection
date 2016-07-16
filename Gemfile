@@ -26,6 +26,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'mailboxer' , github: 'mailboxer/mailboxer'
+gem 'searchkick'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
