@@ -2,7 +2,15 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :set_profile
   before_action :authenticate_user!
+  before_action :can_not_review_yourself, only: [:new, :create]
 
+
+  def can_not_review_yourself
+    if @profile.user_id == current_user.id
+      flash[:notice] = 'Access denied as you can not review yourself'
+      redirect_to @profile
+    end
+  end
   # GET /reviews/new
   def new
     @review = Review.new

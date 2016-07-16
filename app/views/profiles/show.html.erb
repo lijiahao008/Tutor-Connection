@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 <%= image_tag @profile.image.url(:medium) %>
 <div class= "star-rating" data-score= <%= @avg_review %> ></div>
 <em><%= "#{@reviews.length} reviews" %></em>
@@ -21,9 +21,9 @@
 <%= link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
 <%= link_to 'Back', profiles_path %> |
-
-<%= link_to 'Write a review', new_profile_review_path(@profile) %>
-
+<% unless user_signed_in? && @profile.user_id == current_user.id %>
+	<%= link_to 'Write a review', new_profile_review_path(@profile) %>
+<% end %>
 <p>
   <strong>Reviews:</strong>
   <% if @reviews.blank? %>
@@ -33,7 +33,7 @@
   		<div class= "reviews">
   			<div class= "star-rating" data-score= <%= review.rating %> ></div>
   			<p><%= review.comment %></p>
-  			<% if review.user_id == current_user.id %>
+  			<% if user_signed_in? && review.user_id == current_user.id %>
   				<%= link_to 'Delete Review', profile_review_path(@profile, review), method: :delete, data: { confirm: 'Are you sure?' }%>
   			<% end %>
   		</div>
