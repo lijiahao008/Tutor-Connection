@@ -1,8 +1,15 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  # GET /profiles
-  # GET /profiles.json
+  before_action :profile_owner, only: [:edit, :update, :destroy]
+
+  def profile_owner
+    unless @profile.user_id == current_user.id
+      flash[:notice] = 'Access denied as you are not owner of this Profile'
+      redirect_to profiles_path
+    end
+  end
+
   def index
     @profiles = Profile.all
   end
@@ -20,13 +27,14 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+
   end
 
   # POST /profiles
   # POST /profiles.json
   def create
     @profile = current_user.build_profile(profile_params)
-    
+
 
     respond_to do |format|
       if @profile.save
