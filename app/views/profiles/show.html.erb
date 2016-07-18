@@ -77,7 +77,7 @@
               <div class="comment">
                 <a href="#" class="pull-left">
                   <% if review.user.profile != nil %>
-                <%= image_tag review.user.profile.image.url(:small), class: "center-block img-circle img-thumbnail img-responsive" %>
+                    <%= image_tag review.user.profile.image.url(:small), class: "img-circle img-responsive", width: "80", height: "80" %>
                 <% end %>
                 </a>
                 <div class="media-body">

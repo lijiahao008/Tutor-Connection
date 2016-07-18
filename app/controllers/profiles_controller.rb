@@ -98,4 +98,6 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:name, :address, :rate, :image)
     end
+
+    
 end

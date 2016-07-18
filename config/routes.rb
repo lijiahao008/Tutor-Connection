@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       post :reply
       post :restore
       post :mark_as_read
+      post :mark_as_unread
     end
     collection do
       delete :empty_trash

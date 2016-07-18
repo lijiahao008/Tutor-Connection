@@ -25,6 +25,12 @@ class ConversationsController < ApplicationController
     redirect_to conversations_path
   end
 
+  def mark_as_unread
+    @conversation.mark_as_unread(current_user)
+    flash[:success] = 'The conversation was marked as unread.'
+    redirect_to conversations_path
+  end
+
   def reply
     current_user.reply_to_conversation(@conversation, params[:body])
     flash[:success] = 'Reply sent'
@@ -60,6 +66,8 @@ class ConversationsController < ApplicationController
   def get_conversation
     @conversation ||= @mailbox.conversations.find(params[:id])
   end
+
+  
 
   def get_box
     if params[:box].blank? or !["inbox","sent","trash"].include?(params[:box])
