@@ -1,50 +1,119 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="well panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 text-center">
+              <%= image_tag @profile.image.url(:medium), class: "center-block img-circle img-responsive" %> 
+              <div class= "star-rating" data-score= <%= @avg_review %> ></div>
+              <em><%= "#{@reviews.length} reviews" %></em>
+            </div>
+            <!--/col--> 
+            <div class="col-xs-12 col-sm-8">
+              <h2><%= @profile.name %></h2>
+              <p><strong>Address: </strong><%= @profile.address %></p>
+              <p><strong>Hourly Rate: </strong> <%= @profile.rate %></p>
+              <p><strong>Skills: </strong>
+                <span class="label label-info tags">html5</span> 
+                <span class="label label-info tags">css3</span>
+                <span class="label label-info tags">jquery</span>
+                <span class="label label-info tags">bootstrap3</span>
+              </p>
+            </div>
+            <!--/col-->          
+            <div class="clearfix"></div>
+            <div class="col-xs-12 col-sm-4" style="margin-top:50px">
+              <%= link_to "Back", profiles_path, :class => "btn btn-success btn-block" %>
 
-<%= image_tag @profile.image.url(:medium) %>
-<div class= "star-rating" data-score= <%= @avg_review %> ></div>
-<em><%= "#{@reviews.length} reviews" %></em>
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
+            </div>
+            <!--/col-->
+            <% if user_signed_in? && (current_user.id == @profile.user_id) %>
+              <div class="col-xs-12 col-sm-4" style="margin-top:50px">
+                <%= link_to 'Edit', edit_profile_path(@profile), class: "btn btn-info btn-block" %> 
+              </div>
+            <!--/col-->
+              <div class="col-xs-12 col-sm-4" style="margin-top:50px">
+              <%= link_to 'Destroy', @profile, class: "btn btn-primary btn-block", method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            <!--/col-->
+            <% end %>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
+            <% unless user_signed_in? && @profile.user_id == current_user.id %>
+              <div class="col-xs-12 col-sm-4" style="margin-top:50px">
+                <%= link_to 'Write a review', new_profile_review_path(@profile), class: "btn btn-info btn-block" %> 
+              </div>
 
-<p>
-  <strong>Hourly rate:</strong>
-  <%= @profile.rate %>
-</p>
-<% if user_signed_in? && (current_user.id == @profile.user_id) %>
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<% end %>
-<%= link_to 'Back', profiles_path %> |
-<% unless user_signed_in? && @profile.user_id == current_user.id %>
-	<%= link_to 'Write a review', new_profile_review_path(@profile) %> |
-<% end %>
-<% if user_signed_in? && @profile.user_id != current_user.id %>
-	<%= link_to 'Send message', new_message_path(to: @profile.user_id), class: 'btn btn-default btn-sm' %>
-<% end %>
-<p>
-  <strong>Reviews:</strong>
-  <% if @reviews.blank? %>
-  	<h3> No reviews yet </h3>
-  <% else %>
-  	<% @reviews.each do |review| %>
-  		<div class= "reviews">
-  			<div class= "star-rating" data-score= <%= review.rating %> ></div>
-  			<p><%= review.comment %></p>
-  			<% if user_signed_in? && review.user_id == current_user.id %>
-  				<%= link_to 'Delete Review', profile_review_path(@profile, review), method: :delete, data: { confirm: 'Are you sure?' }%>
-  			<% end %>
-  		</div>
-  	<% end %>
-  <% end %>
+              <div class="col-xs-12 col-sm-4" style="margin-top:50px">
+                <%= link_to 'Send message', new_message_path(to: @profile.user_id), class: "btn btn-primary btn-block" %>
+              </div>
+            <% end %>
+          </div>
+          <!--/row-->
+        </div>
+        <!--/panel-body-->
+      </div>
+      <!--/panel-->
+    </div>
+    <!--/col--> 
+  </div>
+  <!--/row--> 
+</div>
 
-</p>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          Reviews
+        </div>
+        <div class="panel-body comments">
+          <% if @reviews.blank? %>
+            <h3> No reviews yet </h3>
+          <% else %>
+          <ul class="media-list">
+            <% @reviews.each do |review| %>
+            <li class="media">
+              <div class="comment">
+                <a href="#" class="pull-left">
+                  <% if review.user.profile != nil %>
+                <%= image_tag review.user.profile.image.url(:small), class: "center-block img-circle img-thumbnail img-responsive" %>
+                <% end %>
+                </a>
+                <div class="media-body">
+                  <strong class="text-success">
+                    <% if review.user.profile != nil %>
+                        <%= review.user.profile.name %>
+                    <% else %>
+                        Anonymous    
+                    <% end %>
+                  </strong>
+                  <span class="text-muted">
+                  <small class="text-muted"><%= review.created_at %></small>
+                  </span>
+                  <div class= "star-rating" data-score= <%= review.rating %> ></div>
+                  <span class="text-muted pull-right">
+                  <% if user_signed_in? && review.user_id == current_user.id %>
+                    <%= link_to 'Delete Review', profile_review_path(@profile, review), method: :delete, data: { confirm: 'Are you sure?' }%>
+                  <% end %>
+                  
+                  </span>
+                  <p>
+                    <%= review.comment %>
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+            <% end %>
+           <% end %> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/container-->
 <script>
 	$('.star-rating').raty({
 		path: '/assets',

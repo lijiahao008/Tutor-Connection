@@ -27,7 +27,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     @reviews = Review.where(profile_id: @profile.id).order("created_at DESC")
-
+    
     if @reviews.blank?
       @avg_review = 0
     else

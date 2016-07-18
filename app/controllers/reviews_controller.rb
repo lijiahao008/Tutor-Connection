@@ -5,12 +5,7 @@ class ReviewsController < ApplicationController
   before_action :can_not_review_yourself, only: [:new, :create]
 
 
-  def can_not_review_yourself
-    if @profile.user_id == current_user.id
-      flash[:notice] = 'Access denied as you can not review yourself'
-      redirect_to @profile
-    end
-  end
+  
   # GET /reviews/new
   def new
     @review = Review.new
@@ -66,6 +61,7 @@ class ReviewsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
+      
     end
 
     def set_profile
@@ -75,4 +71,11 @@ class ReviewsController < ApplicationController
     def review_params
       params.require(:review).permit(:rating, :comment)
     end
+
+    def can_not_review_yourself
+    if @profile.user_id == current_user.id
+      flash[:notice] = 'Access denied as you can not review yourself'
+      redirect_to @profile
+    end
+  end
 end
