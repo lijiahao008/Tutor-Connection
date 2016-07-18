@@ -8,10 +8,19 @@ Rails.application.routes.draw do
   	end
   	resources :reviews, except: [:show, :index]
   end
-  resources :conversations do
-  	resources :messages
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :reply
+      post :restore
+      post :mark_as_read
+    end
+    collection do
+      delete :empty_trash
+    end
   end
+  resources :messages, only: [:new, :create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'profiles#index'
+  get 'contact', :to => 'welcome#contact'
+  root 'welcome#index'
 end

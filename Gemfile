@@ -27,6 +27,10 @@ gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'mailboxer' , github: 'mailboxer/mailboxer'
 gem 'searchkick'
+gem 'chosen-rails'
+gem 'jquery-turbolinks'
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

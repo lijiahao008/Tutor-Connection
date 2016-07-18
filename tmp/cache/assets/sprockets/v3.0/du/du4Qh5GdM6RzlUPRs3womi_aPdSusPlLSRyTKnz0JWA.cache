@@ -1,0 +1,15 @@
+I"Ë(function() {
+  var ready;
+
+  ready = function() {};
+
+  jQuery(function() {
+    return $('.chosen-it').chosen();
+  });
+
+  $(document).ready(ready);
+
+  $(document).on('page:load', ready);
+
+}).call(this);
+:ET
